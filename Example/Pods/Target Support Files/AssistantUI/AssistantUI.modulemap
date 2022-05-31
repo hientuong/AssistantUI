@@ -1,0 +1,6 @@
+framework module AssistantUI {
+  umbrella header "AssistantUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

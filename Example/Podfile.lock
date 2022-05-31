@@ -1,0 +1,16 @@
+PODS:
+  - AssistantUI (0.1.0)
+
+DEPENDENCIES:
+  - AssistantUI (from `../`)
+
+EXTERNAL SOURCES:
+  AssistantUI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AssistantUI: 489033801c2f4dc9e1e6a6009717cefcca244f58
+
+PODFILE CHECKSUM: c9a49207419d12699936c22f0aec2b71b27e62fb
+
+COCOAPODS: 1.11.2

@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/cong nguyen/AssistantUI'
+  s.homepage         = 'https://github.com/congnq/AssistantUI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'cong nguyen' => 'congnq.hp@gmail.com' }
-  s.source           = { :git => 'https://github.com/cong nguyen/AssistantUI.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:congnq/AssistantUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'

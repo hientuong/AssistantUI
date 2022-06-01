@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of AssistantUI.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/cong nguyen/AssistantUI",
+  "homepage": "https://github.com/congnq/AssistantUI",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,22 @@
     "cong nguyen": "congnq.hp@gmail.com"
   },
   "source": {
-    "git": "https://github.com/cong nguyen/AssistantUI.git",
+    "git": "git@github.com:congnq/AssistantUI.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "AssistantUI/Classes/**/*"
+  "source_files": "AssistantUI/Classes/**/*",
+  "dependencies": {
+    "RxSwift": [
+      "~> 6.5.0"
+    ],
+    "RxCocoa": [
+      "~> 6.5.0"
+    ],
+    "RxDataSources": [
+      "~> 5.0"
+    ]
+  }
 }

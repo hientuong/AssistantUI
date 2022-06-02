@@ -12,13 +12,9 @@ import SwifterSwift
 
 protocol ViewModelProtocol {
     var disposeBag: DisposeBag { get set }
-    init()
-    func back()
 }
 
 class BaseViewModel: NSObject, ViewModelProtocol {
-    public typealias RouteType = AppRoute
-    public var router: WeakRouter<AppRoute>
     public var disposeBag: DisposeBag = DisposeBag()
     public let errorTracker = ErrorTracker()
     public let validateTracker = PublishSubject<[Error]>()
@@ -27,15 +23,7 @@ class BaseViewModel: NSObject, ViewModelProtocol {
     public var total: Int = 0
     public var isLoading: Bool = false
     public var shouldLoadMore = BehaviorSubject<Bool>(value: true)
-    
-    required public init(with router: WeakRouter<AppRoute>) {
-        self.router = router
-    }
-    
-    func back() {
-        router.trigger(.pop(nil))
-    }
-    
+
     func handleError(_ error: Error) {
         errorTracker.trackError(error)
     }

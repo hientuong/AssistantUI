@@ -10,10 +10,11 @@ import UIKit
 import AssistantUI
 
 class ViewController: UIViewController {
+    @IBOutlet weak var lblText: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        Assistant.shared.start()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

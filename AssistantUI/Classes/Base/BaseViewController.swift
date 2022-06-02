@@ -8,46 +8,21 @@
 import UIKit
 import RxSwift
 
-struct NavigationSetting {
-    var title: String? = nil
-    var isHiddenTabbar: Bool = false
-    var isHiddenNavigation: Bool = false
-    var isHasBackButton: Bool = true
-    var backImage: String = "ic_back_left_white"
-    var navigationColor: UIColor = StyleKit.MainColorNavigationBar
-    var navigationShadow: UIImage? = nil
-    var rightButtons: [UIBarButtonItem]? = nil
-}
-
 protocol BaseAlert {
     func alert(title: String?,
                message: String,
                buttonTittle: String?,
-               highlight: PopupViewController.HighlightSetting?,
-               handler: ((String?) -> Void)?)
-    func confirmAlert(title: String, message: String,
-               noTitle: String,
-               noColor: UIColor?,
-               yesTitle: String,
-               highlight: PopupViewController.HighlightSetting?,
-               input: PopupViewController.InputSetting?,
-               yesHandler: ((String?) -> Void)?,
-               noHandler: (() -> Void)?)
+               handler: (() -> Void)?)
 }
 
 class BaseViewController<T: ViewModelProtocol>: UIViewController, UseViewModel, BaseAlert {
     
     public typealias Model = T
-    typealias SettingPopup = PopupViewController.SettingPopup
     var disposeBag = DisposeBag()
     var viewModel: Model!
     var bottomConstraint: NSLayoutConstraint?
     
     var isLoading: Bool = false
-    
-    public var setting: NavigationSetting {
-        return NavigationSetting()
-    }
     
     open func bind(to model: Model) {
         self.viewModel = model
@@ -55,7 +30,6 @@ class BaseViewController<T: ViewModelProtocol>: UIViewController, UseViewModel, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .hex1D1D27
         registerNotification()
         configUI()
         bind()
@@ -73,90 +47,26 @@ class BaseViewController<T: ViewModelProtocol>: UIViewController, UseViewModel, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.layoutIfNeeded()
-        UIApplication.shared.statusBarStyle = .lightContent
-        title = setting.title
-        tabBarController?.tabBar.isHidden = setting.isHiddenTabbar
-        navigationController?.navigationBar.isHidden = setting.isHiddenNavigation
-        styleNavigation()
-    }
-    
-    private func styleNavigation() {
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.shadowImage = setting.navigationShadow
-        let backgroundColor = UIImage(color: setting.navigationColor, size: CGSize(width: 1, height: 1))
-        navigationController?.navigationBar.setBackgroundImage(backgroundColor, for: .default)
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white,
-                                                                   .font: UIFont(name: StyleKit.fontNameBold, size: 16) ??
-                                                                            UIFont.systemFont(ofSize: 16)]
-        navigationController?.navigationBar.isTranslucent = false
-        if setting.isHasBackButton {
-            let backItem = UIBarButtonItem(
-                image: UIImage(named: setting.backImage),
-                style: .plain,
-                target: self,
-                action: #selector(backAction))
-            navigationItem.leftBarButtonItem = backItem
-        } else {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(
-                image: nil,
-                style: .plain,
-                target: self,
-                action: nil)
-        }
-        if let rightButtons = setting.rightButtons {
-            navigationItem.rightBarButtonItems = rightButtons
-        } else {
-            navigationItem.rightBarButtonItems = nil
-        }
-        view.layoutIfNeeded()
     }
 
     func alert(title: String?,
                message: String,
                buttonTittle: String? = "OK",
-               highlight: PopupViewController.HighlightSetting? = nil,
-               handler: ((String?) -> Void)? = nil) {
-        let alertController = PopupViewController.initFromNib()
-        alertController.setting = SettingPopup(title: title,
-                                               highlight: highlight,
-                                               message: message,
-                                               rightTitle: buttonTittle,
-                                               rightAction: handler)
-        alertController.modalTransitionStyle = .crossDissolve
-        alertController.modalPresentationStyle = .overFullScreen
+               handler: (() -> Void)? = nil) {
+        let alertController = UIAlertController(title: title ?? "",
+                                                message: message,
+                                                defaultActionButtonTitle: buttonTittle ?? "OK")
+        let action = UIAlertAction(title: buttonTittle, style: .default) { action in
+            handler?()
+        }
+        alertController.addAction(action)
         DispatchQueue.main.async { [weak self] in
             self?.present(alertController, animated: true, completion: nil)
         }
     }
-    
-    func confirmAlert(title: String, message: String,
-               noTitle: String = "Cancel",
-               noColor: UIColor? = nil,
-               yesTitle: String = "Confirm",
-               highlight: PopupViewController.HighlightSetting? = nil,
-               input: PopupViewController.InputSetting? = nil,
-               yesHandler: ((String?) -> Void)? = nil,
-               noHandler: (() -> Void)? = nil) {
-        let alertController = PopupViewController.initFromNib()
-        alertController.setting = SettingPopup(title: title,
-                                               highlight: highlight,
-                                               message: message,
-                                               input: input,
-                                               leftTitle: noTitle,
-                                               leftColor: noColor,
-                                               leftAction: noHandler,
-                                               rightTitle: yesTitle,
-                                               rightAction: yesHandler)
-        alertController.modalTransitionStyle = .crossDissolve
-        alertController.modalPresentationStyle = .overFullScreen
-        DispatchQueue.main.async { [weak self] in
-            self?.present(alertController, animated: true, completion: nil)
-        }
-    }
-
     
     @objc func backAction() {
-        viewModel.back()
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func handleKeyboard(_ notification: Notification) {

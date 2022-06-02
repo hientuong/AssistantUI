@@ -11,6 +11,11 @@ import RxSwift
 import RxCocoa
 
 final class WaitCommandViewController: BaseViewController<WaitCommandViewModel> {
+    static func createViewController() -> WaitCommandViewController {
+        let viewModel = WaitCommandViewModel()
+        let viewController = WaitCommandViewController.newInstance(with: viewModel)
+        return viewController
+    }
     
     override func configUI() {
     }

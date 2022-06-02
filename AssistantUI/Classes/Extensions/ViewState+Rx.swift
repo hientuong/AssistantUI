@@ -55,12 +55,12 @@ extension RxSwift.Reactive where Base: UIViewController {
     }
 
     var willMove: Observable<UIViewController?> {
-        methodInvoked(#selector(UIViewController.willMove(toParent:)))
+        methodInvoked(#selector(UIViewController.willMove))
             .map { $0.first as? UIViewController? ?? nil }
     }
 
     var didMove: Observable<UIViewController?> {
-        methodInvoked(#selector(UIViewController.didMove(toParent:)))
+        methodInvoked(#selector(UIViewController.didMove))
             .map { $0.first as? UIViewController? ?? nil }
     }
 

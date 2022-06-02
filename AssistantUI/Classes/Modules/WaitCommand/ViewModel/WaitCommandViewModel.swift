@@ -18,10 +18,6 @@ final class WaitCommandViewModel: BaseViewModel {
         let error: Driver<Error>
     }
     
-    required init() {
-        super.init()
-    }
-    
     func transform(input: Input) -> Output {
         return Output(error: errorTracker.asDriver())
     }

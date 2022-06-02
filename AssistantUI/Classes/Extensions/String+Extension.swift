@@ -52,26 +52,3 @@ extension String {
         }
     }
 }
-
-extension NSAttributedString {
-    func resizeAttachment(with width: CGFloat, height: CGFloat = 200) -> NSAttributedString {
-        let attributedText = NSMutableAttributedString(attributedString: self)
-        let range = NSRange(location: 0, length: attributedText.length)
-        let options = NSAttributedString.EnumerationOptions(rawValue: 0)
-        attributedText.enumerateAttribute(NSAttributedString.Key.attachment,
-                                          in: range,
-                                          options: options) { (value, range, _) in
-            if let attachement = value as? NSTextAttachment,
-                let image = attachement.image(forBounds: attachement.bounds,
-                                              textContainer: NSTextContainer(),
-                                              characterIndex: range.location) {
-                let size = CGSize(width: width, height: height)
-                let newImage = image.resize(size: size)
-                let newAttribut = NSTextAttachment()
-                newAttribut.image = newImage
-                attributedText.addAttribute(.attachment, value: newAttribut, range: range)
-            }
-        }
-        return attributedText
-    }
-}

@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'git@github.com:congnq/AssistantUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'AssistantUI/Classes/**/*'
   
@@ -42,4 +42,5 @@ TODO: Add long description of the pod here.
   s.dependency 'RxSwift', '~> 6.5.0'
   s.dependency 'RxCocoa', '~> 6.5.0'
   s.dependency 'RxDataSources', '~> 5.0'
+  s.dependency 'SwifterSwift', '5.2.0'
 end

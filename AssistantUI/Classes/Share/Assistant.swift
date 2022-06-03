@@ -11,27 +11,53 @@ import RxCocoa
 
 public class Assistant {
     public static let shared = Assistant()
-    private var speechRecognizer: SpeechRecognizer!
-    internal var voiceCommand = BehaviorSubject<String>(value: "")
     
-    public func start() {
-        speechRecognizer = SpeechRecognizer()
+    private var disposeBag = DisposeBag()
+    private var speechRecognizer: SpeechRecognizer!
+    private var hasNewCommand = true
+    private var navigationVC: UINavigationController?
+    
+    var commandObser = PublishSubject<String>()
+    
+    init() {
         config()
     }
     
+    public func start() {
+        speechRecognizer.transcribe()
+    }
+    
     private func config() {
+        speechRecognizer = SpeechRecognizer()
         speechRecognizer.didGotTranscript = { [weak self] message in
             self?.checkCommand(message)
-            self?.voiceCommand.onNext(message)
         }
     }
     
     private func checkCommand(_ command: String) {
-        if command == "Hello" {
-            let vc = WaitCommandViewController.createViewController()
+        if command == "Hello", navigationVC == nil {
+            hasNewCommand = false
+            let vc = AssistantViewController.createViewController()
             let navigation = UINavigationController(rootViewController: vc)
-            guard let rootVC = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
-            rootVC.pushViewController(navigation, completion: nil)
+            navigation.modalTransitionStyle = .crossDissolve
+            navigation.modalPresentationStyle = .overFullScreen
+            if let rootVC = UIApplication.shared.windows.first?.rootViewController as? UINavigationController {
+                rootVC.pushViewController(navigation, completion: nil)
+            } else if let rootVC = UIApplication.shared.windows.first?.rootViewController {
+                rootVC.present(navigation, animated: true)
+            }
+            self.navigationVC = navigation
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+                if self?.hasNewCommand == false {
+                    self?.navigationVC?.dismiss(animated: true, completion: nil)
+                    self?.navigationVC = nil
+                    self?.speechRecognizer.resetTranscript()
+                }
+            }
+        } else {
+            hasNewCommand = true
+            commandObser.onNext(command)
         }
+        
     }
 }

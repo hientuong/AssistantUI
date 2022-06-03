@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import Speech
+import RxSwift
 
 class SpeechRecognizer: ObservableObject {
    enum RecognizerError: Error {
@@ -36,7 +37,6 @@ class SpeechRecognizer: ObservableObject {
         
     init() {
         recognizer = SFSpeechRecognizer()
-        prepareEngine()
         
         Task(priority: .background) {
             do {
@@ -59,17 +59,16 @@ class SpeechRecognizer: ObservableObject {
         reset()
     }
     
-    private func transcribe() {
-        guard let recognizer = self.recognizer, recognizer.isAvailable else {
-            speakError(RecognizerError.recognizerIsUnavailable)
-            return
-        }
-        guard let request = self.request else { return }
-        task = recognizer.recognitionTask(with: request, resultHandler: recognitionHandler(result:error:))
+    func transcribe() {
+        prepareEngine()
     }
     
     func stopTranscribing() {
         reset()
+    }
+    
+    func resetTranscript() {
+        transcript = ""
     }
     
     private func reset() {
@@ -133,6 +132,7 @@ class SpeechRecognizer: ObservableObject {
     }
     
     private func speak(_ message: String) {
+        guard transcript != message else { return }
         transcript = message
         self.didGotTranscript?(transcript)
     }

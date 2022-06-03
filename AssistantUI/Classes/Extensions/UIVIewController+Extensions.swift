@@ -10,7 +10,8 @@ import UIKit
 extension UIViewController {
     static func initFromNib() -> Self {
         func instanceFromNib<T: UIViewController>() -> T {
-            return T(nibName: String(describing: self), bundle: nil)
+            let bundle = Bundle(for: self)
+            return T(nibName: String(describing: self), bundle: bundle)
         }
         return instanceFromNib()
     }

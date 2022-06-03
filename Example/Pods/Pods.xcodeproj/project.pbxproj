@@ -128,9 +128,6 @@
 		4426C5F92848FD8A003EADD9 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5E22848FD8A003EADD9 /* UITableView+Extensions.swift */; };
 		4426C5FA2848FD8A003EADD9 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5E32848FD8A003EADD9 /* UIScrollView+Extension.swift */; };
 		4426C5FB2848FD8A003EADD9 /* ViewState+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5E42848FD8A003EADD9 /* ViewState+Rx.swift */; };
-		4426C5FC2848FD8A003EADD9 /* WaitCommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5E82848FD8A003EADD9 /* WaitCommandViewModel.swift */; };
-		4426C5FD2848FD8A003EADD9 /* WaitCommandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4426C5EA2848FD8A003EADD9 /* WaitCommandViewController.xib */; };
-		4426C5FE2848FD8A003EADD9 /* WaitCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5EB2848FD8A003EADD9 /* WaitCommandViewController.swift */; };
 		4426C5FF2848FD8A003EADD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5ED2848FD8A003EADD9 /* BaseViewController.swift */; };
 		4426C6002848FD8A003EADD9 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5EE2848FD8A003EADD9 /* BaseTableViewCell.swift */; };
 		4426C6012848FD8A003EADD9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426C5EF2848FD8A003EADD9 /* BaseViewModel.swift */; };
@@ -364,6 +361,9 @@
 		CC9C8BC9E8C610C50138C694355A8E66 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F9E6278D641ADD9BEE4CF7B4FC703 /* UITableViewExtensions.swift */; };
 		CCEB274FD380ABA10BBDBA152048462C /* Infallible+Zip+arity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756727FA6B74A279D3AE2CF91BEF784C /* Infallible+Zip+arity.swift */; };
 		CCFCDCFDF0F67144AB27C3BDB3C95547 /* RxTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3521FB99FFB49BC783066F6B5430D70 /* RxTarget.swift */; };
+		CE13A44C2849F87B00315C20 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13A4482849F87B00315C20 /* AssistantViewModel.swift */; };
+		CE13A44D2849F87B00315C20 /* AssistantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE13A44A2849F87B00315C20 /* AssistantViewController.xib */; };
+		CE13A44E2849F87B00315C20 /* AssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13A44B2849F87B00315C20 /* AssistantViewController.swift */; };
 		CF3F90AD4721433BF2CDA8D623123C92 /* SchedulerServices+Emulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ECD4C46F16613400982ADA4E684DA7 /* SchedulerServices+Emulation.swift */; };
 		D0CAD452A47BCE692E75D0D3B79BDEB4 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFADBD64CA7A6956CC68674E8EF7793 /* ObservableType.swift */; };
 		D1F095E2B35DB1F524810DCAE5CC86C8 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7B4BFEE5B7468E8754153B68130F3 /* Disposable.swift */; };
@@ -723,9 +723,6 @@
 		4426C5E22848FD8A003EADD9 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		4426C5E32848FD8A003EADD9 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		4426C5E42848FD8A003EADD9 /* ViewState+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewState+Rx.swift"; sourceTree = "<group>"; };
-		4426C5E82848FD8A003EADD9 /* WaitCommandViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitCommandViewModel.swift; sourceTree = "<group>"; };
-		4426C5EA2848FD8A003EADD9 /* WaitCommandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitCommandViewController.xib; sourceTree = "<group>"; };
-		4426C5EB2848FD8A003EADD9 /* WaitCommandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitCommandViewController.swift; sourceTree = "<group>"; };
 		4426C5ED2848FD8A003EADD9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4426C5EE2848FD8A003EADD9 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		4426C5EF2848FD8A003EADD9 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -997,6 +994,9 @@
 		CD37E085DF710604138F343BA7D0968D /* AssistantUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AssistantUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42E09CBFC0287AB0D3A688E3C128A7 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		CDB824BBEDFEE97F85DC84B8361267AA /* CAGradientLayerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CAGradientLayerExtensions.swift; path = Sources/SwifterSwift/CoreAnimation/CAGradientLayerExtensions.swift; sourceTree = "<group>"; };
+		CE13A4482849F87B00315C20 /* AssistantViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
+		CE13A44A2849F87B00315C20 /* AssistantViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssistantViewController.xib; sourceTree = "<group>"; };
+		CE13A44B2849F87B00315C20 /* AssistantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantViewController.swift; sourceTree = "<group>"; };
 		CE5E6D16209417A1AD80BC6199494E29 /* RxTabBarDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTabBarDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxTabBarDelegateProxy.swift; sourceTree = "<group>"; };
 		CF127A8F0F943E2680C6E4416EF8A03D /* BehaviorRelay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BehaviorRelay.swift; path = RxRelay/BehaviorRelay.swift; sourceTree = "<group>"; };
 		D137EB45D4612052797E5036A990C467 /* UISegmentedControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Rx.swift"; path = "RxCocoa/iOS/UISegmentedControl+Rx.swift"; sourceTree = "<group>"; };
@@ -1289,35 +1289,9 @@
 		4426C5E52848FD8A003EADD9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4426C5E62848FD8A003EADD9 /* WaitCommand */,
+				CE13A4462849F87B00315C20 /* Assistant */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		4426C5E62848FD8A003EADD9 /* WaitCommand */ = {
-			isa = PBXGroup;
-			children = (
-				4426C5E72848FD8A003EADD9 /* ViewModel */,
-				4426C5E92848FD8A003EADD9 /* ViewController */,
-			);
-			path = WaitCommand;
-			sourceTree = "<group>";
-		};
-		4426C5E72848FD8A003EADD9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4426C5E82848FD8A003EADD9 /* WaitCommandViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4426C5E92848FD8A003EADD9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4426C5EA2848FD8A003EADD9 /* WaitCommandViewController.xib */,
-				4426C5EB2848FD8A003EADD9 /* WaitCommandViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		4426C5EC2848FD8A003EADD9 /* Base */ = {
@@ -1864,6 +1838,40 @@
 			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
+		CE13A4462849F87B00315C20 /* Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				CE13A44F284A1C6000315C20 /* Cells */,
+				CE13A4472849F87B00315C20 /* ViewModel */,
+				CE13A4492849F87B00315C20 /* ViewController */,
+			);
+			path = Assistant;
+			sourceTree = "<group>";
+		};
+		CE13A4472849F87B00315C20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE13A4482849F87B00315C20 /* AssistantViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE13A4492849F87B00315C20 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE13A44A2849F87B00315C20 /* AssistantViewController.xib */,
+				CE13A44B2849F87B00315C20 /* AssistantViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE13A44F284A1C6000315C20 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -2376,7 +2384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4452D149284920BF0097DA46 /* Asset.xcassets in Resources */,
-				4426C5FD2848FD8A003EADD9 /* WaitCommandViewController.xib in Resources */,
+				CE13A44D2849F87B00315C20 /* AssistantViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2439,19 +2447,19 @@
 				4426C5FA2848FD8A003EADD9 /* UIScrollView+Extension.swift in Sources */,
 				4426C6042848FD8A003EADD9 /* SpeechRecognizer.swift in Sources */,
 				4452D14728491F5F0097DA46 /* GradientView.swift in Sources */,
+				CE13A44E2849F87B00315C20 /* AssistantViewController.swift in Sources */,
 				4426C6022848FD8A003EADD9 /* BaseCollectionViewCell.swift in Sources */,
 				EC0C91387BF0AD7C725EE6C0CBBF3442 /* AssistantUI-dummy.m in Sources */,
 				4426C5FF2848FD8A003EADD9 /* BaseViewController.swift in Sources */,
 				4426C5F62848FD8A003EADD9 /* UIVIewController+Extensions.swift in Sources */,
 				4426C6002848FD8A003EADD9 /* BaseTableViewCell.swift in Sources */,
 				4426C5F72848FD8A003EADD9 /* UIView+Extensions.swift in Sources */,
+				CE13A44C2849F87B00315C20 /* AssistantViewModel.swift in Sources */,
 				4426C5F92848FD8A003EADD9 /* UITableView+Extensions.swift in Sources */,
 				4426C6012848FD8A003EADD9 /* BaseViewModel.swift in Sources */,
 				4426C6052848FD8A003EADD9 /* Assistant.swift in Sources */,
-				4426C5FC2848FD8A003EADD9 /* WaitCommandViewModel.swift in Sources */,
 				4426C5F82848FD8A003EADD9 /* String+Extension.swift in Sources */,
 				4426C60728490018003EADD9 /* ErrorTracker.swift in Sources */,
-				4426C5FE2848FD8A003EADD9 /* WaitCommandViewController.swift in Sources */,
 				4426C6032848FD8A003EADD9 /* BaseView.swift in Sources */,
 				4426C5FB2848FD8A003EADD9 /* ViewState+Rx.swift in Sources */,
 				4426C60928490071003EADD9 /* Observable+Extension.swift in Sources */,

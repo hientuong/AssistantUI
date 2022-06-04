@@ -1841,7 +1841,6 @@
 		CE13A4462849F87B00315C20 /* Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				CE13A44F284A1C6000315C20 /* Cells */,
 				CE13A4472849F87B00315C20 /* ViewModel */,
 				CE13A4492849F87B00315C20 /* ViewController */,
 			);
@@ -1863,13 +1862,6 @@
 				CE13A44B2849F87B00315C20 /* AssistantViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		CE13A44F284A1C6000315C20 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {

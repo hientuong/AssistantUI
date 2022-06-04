@@ -1,9 +1,15 @@
 PODS:
-  - AssistantUI (0.1.0):
+  - Alamofire (5.6.1)
+  - AssistantAPI (0.1.2):
+    - Alamofire (= 5.6.1)
+    - RxCocoa (~> 6.5.0)
+    - RxSwift (~> 6.5.0)
+  - AssistantUI (0.1.1):
+    - AssistantAPI (= 0.1.2)
     - RxCocoa (~> 6.5.0)
     - RxDataSources (~> 5.0)
     - RxSwift (~> 6.5.0)
-    - SwifterSwift
+    - SwifterSwift (= 5.2.0)
   - Differentiator (5.0.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -45,7 +51,10 @@ DEPENDENCIES:
   - AssistantUI (from `../`)
 
 SPEC REPOS:
+  "git@github.com:congnq/PodSpec.git":
+    - AssistantAPI
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - Differentiator
     - RxCocoa
     - RxDataSources
@@ -58,7 +67,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AssistantUI: fd1d30b1f41c74578b48d1b070158bdab7963c3a
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  AssistantAPI: 78b0d3892ea8d2ecd30830593c325abd0fb482a5
+  AssistantUI: e49953427f314b61466bff701086441a8cbb08d1
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf

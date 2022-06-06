@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (5.6.1)
-  - AssistantAPI (0.1.2):
+  - AssistantAPI (0.1.3):
     - Alamofire (= 5.6.1)
     - RxCocoa (~> 6.5.0)
     - RxSwift (~> 6.5.0)
   - AssistantUI (0.1.1):
-    - AssistantAPI (= 0.1.2)
+    - AssistantAPI (= 0.1.3)
     - RxCocoa (~> 6.5.0)
     - RxDataSources (~> 5.0)
     - RxSwift (~> 6.5.0)
@@ -68,8 +68,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  AssistantAPI: 78b0d3892ea8d2ecd30830593c325abd0fb482a5
-  AssistantUI: e49953427f314b61466bff701086441a8cbb08d1
+  AssistantAPI: c90fb5470cf71158fdc4bfd7aa79be2ffb31bbc8
+  AssistantUI: 2d35e79aecba859f5cfa330840698a1c0244ae68
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf

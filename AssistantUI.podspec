@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'AssistantUI/Classes/**/*'
   
    s.resource_bundles = {
-     'AssistantUI' => ['AssistantUI/**/*.{xib,storyboard,xcassets}'']
+     'AssistantUI' => ['AssistantUI/**/*.{xib,storyboard,xcassets}']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

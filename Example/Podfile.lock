@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (5.6.1)
-  - AssistantAPI (0.1.3):
+  - AssistantAPI (0.1.4):
     - Alamofire (= 5.6.1)
     - RxCocoa (~> 6.5.0)
     - RxSwift (~> 6.5.0)
   - AssistantUI (0.1.1):
-    - AssistantAPI (= 0.1.3)
+    - AssistantAPI (= 0.1.4)
     - RxCocoa (~> 6.5.0)
     - RxDataSources (~> 5.0)
     - RxSwift (~> 6.5.0)
@@ -68,8 +68,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  AssistantAPI: c90fb5470cf71158fdc4bfd7aa79be2ffb31bbc8
-  AssistantUI: 2d35e79aecba859f5cfa330840698a1c0244ae68
+  AssistantAPI: 2f371488cb55dfeb24997cc239be56325fc07e9a
+  AssistantUI: 38eeac32887474d42354f86bcf207efcba54969c
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
@@ -77,6 +77,6 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: 21a995be2ed9310760a9a25ec747372c2c5b9c12
+PODFILE CHECKSUM: e7954d26bf135c7916adccc10bcf6084f17782df
 
 COCOAPODS: 1.11.2

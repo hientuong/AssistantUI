@@ -43,5 +43,5 @@ TODO: Add long description of the pod here.
   s.dependency 'RxCocoa', '~> 6.5.0'
   s.dependency 'RxDataSources', '~> 5.0'
   s.dependency 'SwifterSwift', '5.2.0'
-  s.dependency 'AssistantAPI', '0.1.3'
+  s.dependency 'AssistantAPI', '0.1.4'
 end

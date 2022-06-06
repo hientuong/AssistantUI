@@ -5,12 +5,13 @@
 //  Created by Gà Nguy Hiểm on 01/06/2022.
 //
 
+import UIKit
 import Foundation
 import AVFoundation
 import Speech
 import RxSwift
 
-class SpeechRecognizer: ObservableObject {
+class SpeechRecognizer {
    enum RecognizerError: Error {
        case nilRecognizer
        case notAuthorizedToRecognize
@@ -33,25 +34,13 @@ class SpeechRecognizer: ObservableObject {
     private var audioEngine: AVAudioEngine?
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
-    private let recognizer: SFSpeechRecognizer?
+    private var recognizer: SFSpeechRecognizer?
         
     init() {
         recognizer = SFSpeechRecognizer()
-        
-        Task(priority: .background) {
-            do {
-                guard recognizer != nil else {
-                    throw RecognizerError.nilRecognizer
-                }
-                guard await SFSpeechRecognizer.hasAuthorizationToRecognize() else {
-                    throw RecognizerError.notAuthorizedToRecognize
-                }
-                guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
-                    throw RecognizerError.notPermittedToRecord
-                }
-            } catch {
-                speakError(error)
-            }
+        requestPermissions { [weak self] error in
+            guard let error = error else { return }
+            self?.speakError(error)
         }
     }
     
@@ -134,7 +123,7 @@ class SpeechRecognizer: ObservableObject {
     private func speak(_ message: String) {
         guard transcript != message else { return }
         transcript = message
-        self.didGotTranscript?(transcript)
+        self.didGotTranscript?(message)
     }
     
     private func speakError(_ error: Error) {
@@ -145,25 +134,72 @@ class SpeechRecognizer: ObservableObject {
             errorMessage += error.localizedDescription
         }
         transcript = "<< \(errorMessage) >>"
+        print("Permission Error: \(transcript)")
     }
 }
 
-fileprivate extension SFSpeechRecognizer {
-    static func hasAuthorizationToRecognize() async -> Bool {
-        await withCheckedContinuation { continuation in
-            requestAuthorization { status in
-                continuation.resume(returning: status == .authorized)
+extension SpeechRecognizer {
+    private func requestPermissions(completion: @escaping((Error?) -> ())) {
+        let group = DispatchGroup()
+        var hasSpeechPermission = false
+        var hasAvAudioPermission = false
+        
+        group.enter()
+        requestSpeechPermission { success in
+            hasSpeechPermission = success
+            group.leave()
+        }
+
+        group.enter()
+        requestAVAudioPermission { success in
+            hasAvAudioPermission = success
+            group.leave()
+        }
+        
+        group.notify(queue: DispatchQueue.global()) { [weak self] in
+            if self?.recognizer == nil {
+                completion(RecognizerError.nilRecognizer)
+            } else if !hasSpeechPermission {
+                completion(RecognizerError.notAuthorizedToRecognize)
+            } else if !hasAvAudioPermission {
+                completion(RecognizerError.notPermittedToRecord)
+            } else {
+                completion(nil)
             }
         }
     }
-}
-
-fileprivate extension AVAudioSession {
-    func hasPermissionToRecord() async -> Bool {
-        await withCheckedContinuation { continuation in
-            requestRecordPermission { authorized in
-                continuation.resume(returning: authorized)
-            }
+    
+    private func requestSpeechPermission(status: @escaping (Bool)->()){
+        if SFSpeechRecognizer.authorizationStatus() == .authorized {
+                 status(true)
+                    return
+                }
+                SFSpeechRecognizer.requestAuthorization { (sta) in
+                    switch sta {
+                    case .authorized:
+                        status(true)
+                    case .denied:
+                        status(false)
+                    case .notDetermined:
+                        SFSpeechRecognizer.requestAuthorization({ (st) in
+                            if st  == .authorized {
+                                status(true)
+                            } else {
+                                status(false)
+                            }
+                        })
+                    case .restricted:
+                        status(false)
+                    default:
+                        status(false)
+                    }
+                }
+        
+    }
+    
+    private func requestAVAudioPermission(status: @escaping (Bool)->()){
+        AVAudioSession.sharedInstance().requestRecordPermission { stt in
+            status(stt)
         }
     }
 }

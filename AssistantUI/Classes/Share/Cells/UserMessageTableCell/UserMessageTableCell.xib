@@ -55,6 +55,10 @@
                                     <constraint firstItem="Sb8-3c-jmT" firstAttribute="top" secondItem="xUb-CD-wyj" secondAttribute="top" constant="6" id="vUT-La-Tng"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="392" placeholderIntrinsicHeight="27" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-L8-ZEc" customClass="WeatherView" customModule="AssistantUI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="392" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-v0-8bj">
                                 <rect key="frame" x="0.0" y="68" width="392" height="284"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,6 +91,7 @@
             <connections>
                 <outlet property="collectionView" destination="BWx-v0-8bj" id="4aV-ym-QTW"/>
                 <outlet property="messageLabel" destination="Zu9-41-fsa" id="UdJ-pc-w03"/>
+                <outlet property="weatherView" destination="bM4-L8-ZEc" id="Ipf-s5-BSP"/>
             </connections>
             <point key="canvasLocation" x="23.188405797101453" y="170.75892857142856"/>
         </tableViewCell>

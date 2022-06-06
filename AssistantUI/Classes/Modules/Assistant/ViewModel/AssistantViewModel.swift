@@ -39,7 +39,7 @@ extension AssistantViewModel {
             }).flatMap({ response -> Single<VAResponse> in
                 print("DEBUG: getVAResponse by message id ")
                 print(response)
-                return AssistantClient.getVAResponse()
+                return AssistantClient.getVAResponse(by: "")
             })
         .subscribe { response in
             print("DEBUG: getVAResponse by session id ")

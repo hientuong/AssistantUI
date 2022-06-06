@@ -14,15 +14,11 @@ import Alamofire
 
 final class UserMessageTableCell: BaseTableViewCell<UserMessageTableCellViewModel> {
     @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var weatherView: WeatherView!
     @IBOutlet private weak var collectionView: UICollectionView!
-    
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-        collectionView.register(nibWithCellClass: ProjectCollectionCell.self)
-    }
 
     override func setupCell() {
-        
+        collectionView.register(nibWithCellClass: ProjectCollectionCell.self)
     }
 }
 

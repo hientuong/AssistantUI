@@ -131,7 +131,6 @@
 		42164E3ED3E506028EBD6A8442021DF7 /* BooleanDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEAF77AA06D6EF5D4D087DAF7A3607 /* BooleanDisposable.swift */; };
 		42305DF21EC320210184CF15315CFB6A /* SchedulerType+SharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52397F715AEDF7E08E8DFCBD0DE33B2E /* SchedulerType+SharedSequence.swift */; };
 		43EFF0DEACBB030C253DD3D43B9B79DD /* Amb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC377286F2D8310BBC217B6F6712B6A /* Amb.swift */; };
-		4452D16F284BC2490097DA46 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4452D16C284BC2230097DA46 /* Media.xcassets */; };
 		44D74AED3AFFD6270F97960BDF1C56BF /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA38A42EEFE6BD615FBD3B6CD5CCEC /* Queue.swift */; };
 		45873E779E7A312DC711B9920EBF9271 /* VirtualTimeScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F31DF1EE27D9A6C39508BAB4282CEC /* VirtualTimeScheduler.swift */; };
 		4594CC07F4967C55B29C24F253FCED2E /* ControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153F7EA1B65F24BB0FF35163ADF7D17 /* ControlProperty.swift */; };
@@ -425,6 +424,44 @@
 		CCCB18078198A92AB2E196221C7F1A68 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A222C991C971C0D851B7DF859D51AF8 /* DateExtensions.swift */; };
 		CCF0302510AA5D8D5058E7145730920F /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F361362D32B752B9585CD97AE9688CA /* DispatchQueue+Extensions.swift */; };
 		CD33DA738E80B6A80191792A32FCE865 /* UIDatePicker+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E97402386DD04559977652C9770B04 /* UIDatePicker+Rx.swift */; };
+		CE2B145F284DE19500085B93 /* BotTextMessageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1453284DE14200085B93 /* BotTextMessageTableCellViewModel.swift */; };
+		CE2B1460284DE19500085B93 /* BotTextMessageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1454284DE14200085B93 /* BotTextMessageTableCell.xib */; };
+		CE2B1461284DE19500085B93 /* BotTextMessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1455284DE14200085B93 /* BotTextMessageTableCell.swift */; };
+		CE2B1462284DE19D00085B93 /* UserMessageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1450284DE14200085B93 /* UserMessageTableCellViewModel.swift */; };
+		CE2B1463284DE19D00085B93 /* UserMessageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2B144F284DE14200085B93 /* UserMessageTableCell.xib */; };
+		CE2B1464284DE19D00085B93 /* UserMessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B1451284DE14200085B93 /* UserMessageTableCell.swift */; };
+		CE2B1468284DE2D600085B93 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1466284DE2D600085B93 /* Media.xcassets */; };
+		CE2B1477284DE38000085B93 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B146B284DE37F00085B93 /* Roboto-Medium.ttf */; };
+		CE2B1478284DE38000085B93 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B146C284DE37F00085B93 /* Roboto-Light.ttf */; };
+		CE2B1479284DE38000085B93 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B146D284DE37F00085B93 /* Roboto-Regular.ttf */; };
+		CE2B147A284DE38000085B93 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B146E284DE37F00085B93 /* Roboto-MediumItalic.ttf */; };
+		CE2B147B284DE38000085B93 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B146F284DE37F00085B93 /* Roboto-ThinItalic.ttf */; };
+		CE2B147C284DE38000085B93 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1470284DE37F00085B93 /* Roboto-BoldItalic.ttf */; };
+		CE2B147D284DE38000085B93 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1471284DE37F00085B93 /* Roboto-LightItalic.ttf */; };
+		CE2B147E284DE38000085B93 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1472284DE37F00085B93 /* Roboto-Italic.ttf */; };
+		CE2B147F284DE38000085B93 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1473284DE37F00085B93 /* Roboto-BlackItalic.ttf */; };
+		CE2B1480284DE38000085B93 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1474284DE37F00085B93 /* Roboto-Bold.ttf */; };
+		CE2B1481284DE38000085B93 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1475284DE37F00085B93 /* Roboto-Thin.ttf */; };
+		CE2B1482284DE38000085B93 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1476284DE37F00085B93 /* Roboto-Black.ttf */; };
+		CE2B1496284DEB9A00085B93 /* Mulish-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1486284DEB9A00085B93 /* Mulish-LightItalic.ttf */; };
+		CE2B1497284DEB9A00085B93 /* Mulish-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1487284DEB9A00085B93 /* Mulish-ExtraBoldItalic.ttf */; };
+		CE2B1498284DEB9A00085B93 /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1488284DEB9A00085B93 /* Mulish-Italic.ttf */; };
+		CE2B1499284DEB9A00085B93 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1489284DEB9A00085B93 /* Mulish-Regular.ttf */; };
+		CE2B149A284DEB9A00085B93 /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B148A284DEB9A00085B93 /* Mulish-Black.ttf */; };
+		CE2B149B284DEB9A00085B93 /* Mulish-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B148B284DEB9A00085B93 /* Mulish-BlackItalic.ttf */; };
+		CE2B149C284DEB9A00085B93 /* Mulish-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B148C284DEB9A00085B93 /* Mulish-SemiBoldItalic.ttf */; };
+		CE2B149D284DEB9A00085B93 /* Mulish-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B148D284DEB9A00085B93 /* Mulish-ExtraLightItalic.ttf */; };
+		CE2B149E284DEB9A00085B93 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B148E284DEB9A00085B93 /* Mulish-Bold.ttf */; };
+		CE2B149F284DEB9A00085B93 /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B148F284DEB9A00085B93 /* Mulish-Light.ttf */; };
+		CE2B14A0284DEB9A00085B93 /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1490284DEB9A00085B93 /* Mulish-ExtraBold.ttf */; };
+		CE2B14A1284DEB9A00085B93 /* Mulish-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1491284DEB9A00085B93 /* Mulish-ExtraLight.ttf */; };
+		CE2B14A2284DEB9A00085B93 /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1492284DEB9A00085B93 /* Mulish-Medium.ttf */; };
+		CE2B14A3284DEB9A00085B93 /* Mulish-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1493284DEB9A00085B93 /* Mulish-MediumItalic.ttf */; };
+		CE2B14A4284DEB9A00085B93 /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1494284DEB9A00085B93 /* Mulish-SemiBold.ttf */; };
+		CE2B14A5284DEB9A00085B93 /* Mulish-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE2B1495284DEB9A00085B93 /* Mulish-BoldItalic.ttf */; };
+		CE2B14AD284E0C1800085B93 /* ProjectCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2B14A7284DED2B00085B93 /* ProjectCollectionCell.xib */; };
+		CE2B14AE284E0C1800085B93 /* ProjectCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B14A8284DED2B00085B93 /* ProjectCollectionCellViewModel.swift */; };
+		CE2B14AF284E0C1800085B93 /* ProjectCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2B14A9284DED2B00085B93 /* ProjectCollectionCell.swift */; };
 		CE6A95AD93CA7A241C28568AE9D830CC /* HistoricalSchedulerTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37790678844D247C3B9E344F70BDD50 /* HistoricalSchedulerTimeConverter.swift */; };
 		CEB808DFB20A09ED2E4A3E9B16AEE319 /* OperationQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB13F9842C923CAF8C03CAAAAD504730 /* OperationQueueScheduler.swift */; };
 		CEBFFEED65D877702B2F36102528CF6D /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655FA79E44CA3910E3B427A5C539BE04 /* EventMonitor.swift */; };
@@ -840,7 +877,6 @@
 		433B7D35D829E2251227C736E321E082 /* First.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = First.swift; path = RxSwift/Observables/First.swift; sourceTree = "<group>"; };
 		433DC03322E85677BE413E5570F058A6 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
 		43F4B2845EE674E9F6537AEC8CDBBF90 /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "RxCocoa/iOS/UICollectionView+Rx.swift"; sourceTree = "<group>"; };
-		4452D16C284BC2230097DA46 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		447B845DCFD1526E94EF83584AA98D40 /* Bag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = Platform/DataStructures/Bag.swift; sourceTree = "<group>"; };
 		448D99C8723F9654E9A71C53EF3FABAD /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
 		44B868E5F71F9D86885C3C94863C4BBA /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
@@ -1138,6 +1174,44 @@
 		CD37E085DF710604138F343BA7D0968D /* AssistantUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AssistantUI; path = AssistantUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BF86D347A3C4A62A779EB426AEA3B /* Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = RxSwift/Observables/Delay.swift; sourceTree = "<group>"; };
 		CD58AC3B8FE6E33BD51BC45B6F58FDFA /* UITableViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UITableViewExtensions.swift; sourceTree = "<group>"; };
+		CE2B144F284DE14200085B93 /* UserMessageTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserMessageTableCell.xib; sourceTree = "<group>"; };
+		CE2B1450284DE14200085B93 /* UserMessageTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageTableCellViewModel.swift; sourceTree = "<group>"; };
+		CE2B1451284DE14200085B93 /* UserMessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageTableCell.swift; sourceTree = "<group>"; };
+		CE2B1453284DE14200085B93 /* BotTextMessageTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotTextMessageTableCellViewModel.swift; sourceTree = "<group>"; };
+		CE2B1454284DE14200085B93 /* BotTextMessageTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotTextMessageTableCell.xib; sourceTree = "<group>"; };
+		CE2B1455284DE14200085B93 /* BotTextMessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotTextMessageTableCell.swift; sourceTree = "<group>"; };
+		CE2B1466284DE2D600085B93 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		CE2B146B284DE37F00085B93 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CE2B146C284DE37F00085B93 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		CE2B146D284DE37F00085B93 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CE2B146E284DE37F00085B93 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CE2B146F284DE37F00085B93 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1470284DE37F00085B93 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1471284DE37F00085B93 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1472284DE37F00085B93 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		CE2B1473284DE37F00085B93 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1474284DE37F00085B93 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CE2B1475284DE37F00085B93 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		CE2B1476284DE37F00085B93 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		CE2B1486284DEB9A00085B93 /* Mulish-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-LightItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1487284DEB9A00085B93 /* Mulish-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1488284DEB9A00085B93 /* Mulish-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic.ttf"; sourceTree = "<group>"; };
+		CE2B1489284DEB9A00085B93 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		CE2B148A284DEB9A00085B93 /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
+		CE2B148B284DEB9A00085B93 /* Mulish-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CE2B148C284DEB9A00085B93 /* Mulish-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		CE2B148D284DEB9A00085B93 /* Mulish-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		CE2B148E284DEB9A00085B93 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		CE2B148F284DEB9A00085B93 /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
+		CE2B1490284DEB9A00085B93 /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE2B1491284DEB9A00085B93 /* Mulish-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CE2B1492284DEB9A00085B93 /* Mulish-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Medium.ttf"; sourceTree = "<group>"; };
+		CE2B1493284DEB9A00085B93 /* Mulish-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CE2B1494284DEB9A00085B93 /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE2B1495284DEB9A00085B93 /* Mulish-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CE2B14A7284DED2B00085B93 /* ProjectCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCollectionCell.xib; sourceTree = "<group>"; };
+		CE2B14A8284DED2B00085B93 /* ProjectCollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		CE2B14A9284DED2B00085B93 /* ProjectCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCollectionCell.swift; sourceTree = "<group>"; };
 		CE956AC5218D1FBADC1C3CEDC9385610 /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BidirectionalCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
 		CF45FDE82D7A180152FF34CC3CD4C2E0 /* RxTextStorageDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTextStorageDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxTextStorageDelegateProxy.swift; sourceTree = "<group>"; };
 		CFA5CAED5ECD1013249428E668A10863 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift; sourceTree = "<group>"; };
@@ -1744,7 +1818,7 @@
 		3C6ECBD5560C9F37ABDE93CDC4281D9E /* AssistantUI */ = {
 			isa = PBXGroup;
 			children = (
-				4452D16C284BC2230097DA46 /* Media.xcassets */,
+				CE2B1465284DE2D600085B93 /* Assets */,
 				F116F62624ED8DDACCB6A92E6B784008 /* Base */,
 				B76E655C96EC9A6EA23F75CEF3D038D9 /* Extensions */,
 				6AE5D3B476B1F17C2FEDDF618BF7B669 /* Modules */,
@@ -2059,6 +2133,7 @@
 		976ACF9A12E566AD691978E1F7074534 /* Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B1448284DE0C100085B93 /* Cells */,
 				F4DFCC1E1DC4CAFCC14E0EAAB83E72C1 /* ViewController */,
 				367EC098A53534CB0951974BB9BD7065 /* ViewModel */,
 			);
@@ -2155,6 +2230,99 @@
 			children = (
 			);
 			name = AppKit;
+			sourceTree = "<group>";
+		};
+		CE2B1448284DE0C100085B93 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B14A6284DED2B00085B93 /* ProjectCollectionCell */,
+				CE2B1452284DE14200085B93 /* BotTextMessageTableCell */,
+				CE2B144E284DE14200085B93 /* UserMessageTableCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE2B144E284DE14200085B93 /* UserMessageTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B144F284DE14200085B93 /* UserMessageTableCell.xib */,
+				CE2B1450284DE14200085B93 /* UserMessageTableCellViewModel.swift */,
+				CE2B1451284DE14200085B93 /* UserMessageTableCell.swift */,
+			);
+			path = UserMessageTableCell;
+			sourceTree = "<group>";
+		};
+		CE2B1452284DE14200085B93 /* BotTextMessageTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B1453284DE14200085B93 /* BotTextMessageTableCellViewModel.swift */,
+				CE2B1454284DE14200085B93 /* BotTextMessageTableCell.xib */,
+				CE2B1455284DE14200085B93 /* BotTextMessageTableCell.swift */,
+			);
+			path = BotTextMessageTableCell;
+			sourceTree = "<group>";
+		};
+		CE2B1465284DE2D600085B93 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B1485284DEB9900085B93 /* Mulish */,
+				CE2B146A284DE37F00085B93 /* Roboto */,
+				CE2B1466284DE2D600085B93 /* Media.xcassets */,
+			);
+			name = Assets;
+			path = AssistantUI/Assets;
+			sourceTree = "<group>";
+		};
+		CE2B146A284DE37F00085B93 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B146B284DE37F00085B93 /* Roboto-Medium.ttf */,
+				CE2B146C284DE37F00085B93 /* Roboto-Light.ttf */,
+				CE2B146D284DE37F00085B93 /* Roboto-Regular.ttf */,
+				CE2B146E284DE37F00085B93 /* Roboto-MediumItalic.ttf */,
+				CE2B146F284DE37F00085B93 /* Roboto-ThinItalic.ttf */,
+				CE2B1470284DE37F00085B93 /* Roboto-BoldItalic.ttf */,
+				CE2B1471284DE37F00085B93 /* Roboto-LightItalic.ttf */,
+				CE2B1472284DE37F00085B93 /* Roboto-Italic.ttf */,
+				CE2B1473284DE37F00085B93 /* Roboto-BlackItalic.ttf */,
+				CE2B1474284DE37F00085B93 /* Roboto-Bold.ttf */,
+				CE2B1475284DE37F00085B93 /* Roboto-Thin.ttf */,
+				CE2B1476284DE37F00085B93 /* Roboto-Black.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		CE2B1485284DEB9900085B93 /* Mulish */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B1486284DEB9A00085B93 /* Mulish-LightItalic.ttf */,
+				CE2B1487284DEB9A00085B93 /* Mulish-ExtraBoldItalic.ttf */,
+				CE2B1488284DEB9A00085B93 /* Mulish-Italic.ttf */,
+				CE2B1489284DEB9A00085B93 /* Mulish-Regular.ttf */,
+				CE2B148A284DEB9A00085B93 /* Mulish-Black.ttf */,
+				CE2B148B284DEB9A00085B93 /* Mulish-BlackItalic.ttf */,
+				CE2B148C284DEB9A00085B93 /* Mulish-SemiBoldItalic.ttf */,
+				CE2B148D284DEB9A00085B93 /* Mulish-ExtraLightItalic.ttf */,
+				CE2B148E284DEB9A00085B93 /* Mulish-Bold.ttf */,
+				CE2B148F284DEB9A00085B93 /* Mulish-Light.ttf */,
+				CE2B1490284DEB9A00085B93 /* Mulish-ExtraBold.ttf */,
+				CE2B1491284DEB9A00085B93 /* Mulish-ExtraLight.ttf */,
+				CE2B1492284DEB9A00085B93 /* Mulish-Medium.ttf */,
+				CE2B1493284DEB9A00085B93 /* Mulish-MediumItalic.ttf */,
+				CE2B1494284DEB9A00085B93 /* Mulish-SemiBold.ttf */,
+				CE2B1495284DEB9A00085B93 /* Mulish-BoldItalic.ttf */,
+			);
+			path = Mulish;
+			sourceTree = "<group>";
+		};
+		CE2B14A6284DED2B00085B93 /* ProjectCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B14A7284DED2B00085B93 /* ProjectCollectionCell.xib */,
+				CE2B14A8284DED2B00085B93 /* ProjectCollectionCellViewModel.swift */,
+				CE2B14A9284DED2B00085B93 /* ProjectCollectionCell.swift */,
+			);
+			path = ProjectCollectionCell;
 			sourceTree = "<group>";
 		};
 		CED36B6AAB5085EA00F38A9D06774068 /* AssistantAPI */ = {
@@ -2706,7 +2874,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4452D16F284BC2490097DA46 /* Media.xcassets in Resources */,
+				CE2B1463284DE19D00085B93 /* UserMessageTableCell.xib in Resources */,
+				CE2B14AD284E0C1800085B93 /* ProjectCollectionCell.xib in Resources */,
+				CE2B1460284DE19500085B93 /* BotTextMessageTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2756,6 +2926,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2B14A0284DEB9A00085B93 /* Mulish-ExtraBold.ttf in Resources */,
+				CE2B14A3284DEB9A00085B93 /* Mulish-MediumItalic.ttf in Resources */,
+				CE2B149B284DEB9A00085B93 /* Mulish-BlackItalic.ttf in Resources */,
+				CE2B1497284DEB9A00085B93 /* Mulish-ExtraBoldItalic.ttf in Resources */,
+				CE2B149D284DEB9A00085B93 /* Mulish-ExtraLightItalic.ttf in Resources */,
+				CE2B1496284DEB9A00085B93 /* Mulish-LightItalic.ttf in Resources */,
+				CE2B147B284DE38000085B93 /* Roboto-ThinItalic.ttf in Resources */,
+				CE2B147E284DE38000085B93 /* Roboto-Italic.ttf in Resources */,
+				CE2B1477284DE38000085B93 /* Roboto-Medium.ttf in Resources */,
+				CE2B14A5284DEB9A00085B93 /* Mulish-BoldItalic.ttf in Resources */,
+				CE2B14A4284DEB9A00085B93 /* Mulish-SemiBold.ttf in Resources */,
+				CE2B147D284DE38000085B93 /* Roboto-LightItalic.ttf in Resources */,
+				CE2B1480284DE38000085B93 /* Roboto-Bold.ttf in Resources */,
+				CE2B149C284DEB9A00085B93 /* Mulish-SemiBoldItalic.ttf in Resources */,
+				CE2B147A284DE38000085B93 /* Roboto-MediumItalic.ttf in Resources */,
+				CE2B1498284DEB9A00085B93 /* Mulish-Italic.ttf in Resources */,
+				CE2B1468284DE2D600085B93 /* Media.xcassets in Resources */,
+				CE2B1479284DE38000085B93 /* Roboto-Regular.ttf in Resources */,
+				CE2B14A2284DEB9A00085B93 /* Mulish-Medium.ttf in Resources */,
+				CE2B1481284DE38000085B93 /* Roboto-Thin.ttf in Resources */,
+				CE2B1482284DE38000085B93 /* Roboto-Black.ttf in Resources */,
+				CE2B149A284DEB9A00085B93 /* Mulish-Black.ttf in Resources */,
+				CE2B147F284DE38000085B93 /* Roboto-BlackItalic.ttf in Resources */,
+				CE2B14A1284DEB9A00085B93 /* Mulish-ExtraLight.ttf in Resources */,
+				CE2B149F284DEB9A00085B93 /* Mulish-Light.ttf in Resources */,
+				CE2B1499284DEB9A00085B93 /* Mulish-Regular.ttf in Resources */,
+				CE2B149E284DEB9A00085B93 /* Mulish-Bold.ttf in Resources */,
+				CE2B147C284DE38000085B93 /* Roboto-BoldItalic.ttf in Resources */,
+				CE2B1478284DE38000085B93 /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3296,26 +3495,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2B14AE284E0C1800085B93 /* ProjectCollectionCellViewModel.swift in Sources */,
 				604AA111D645FAF56F6FC9D3423DCD90 /* Assistant.swift in Sources */,
 				845D611CED2C38A2FAC5B9B04DFCC74C /* AssistantUI-dummy.m in Sources */,
 				C7A2F563A9C8DC74B0617B259FF86500 /* AssistantViewController.swift in Sources */,
+				CE2B1464284DE19D00085B93 /* UserMessageTableCell.swift in Sources */,
 				7550C69572526C39D24382E9382B23B3 /* AssistantViewController.xib in Sources */,
 				97B0B1041234AA65BD2E532A5940BD99 /* AssistantViewModel.swift in Sources */,
 				05AAC9940C14FE18E31F422FCED492BC /* BaseCollectionViewCell.swift in Sources */,
 				A7A736F985BD38EDE5585351141EE1A1 /* BaseTableViewCell.swift in Sources */,
 				5849B19C94989CDB6113CE1876408023 /* BaseView.swift in Sources */,
+				CE2B1461284DE19500085B93 /* BotTextMessageTableCell.swift in Sources */,
 				F390C69EAC69F93C0B71E6F12A8550AE /* BaseViewController.swift in Sources */,
 				8F72EF30F9F90C0656CA3BD10C0503D5 /* BaseViewModel.swift in Sources */,
 				5D99F5B94EFEDD0E3B0D9357176105A0 /* ErrorTracker.swift in Sources */,
 				AE0196584173A4FBBC9AEAA42EED7741 /* GradientView.swift in Sources */,
 				3166EB36F3A5A78479DE12CB0E26FE0A /* Observable+Extension.swift in Sources */,
+				CE2B1462284DE19D00085B93 /* UserMessageTableCellViewModel.swift in Sources */,
 				A869AA9E0F88B91FA437F867F7515FF0 /* SectionModel+Extension.swift in Sources */,
 				86F80A7B3B1AFFE0D0B88B2291637FD5 /* SpeechRecognizer.swift in Sources */,
 				89B5D2EFC1F3E40E54114DD720C34FD4 /* String+Extension.swift in Sources */,
 				1B4A6E6A40A30AD5C77EFC28CABCD950 /* UIScrollView+Extension.swift in Sources */,
 				39F7EFB15788DA103EFD91F7750A489A /* UITableView+Extensions.swift in Sources */,
+				CE2B14AF284E0C1800085B93 /* ProjectCollectionCell.swift in Sources */,
 				DC16D568897C901685A782483BACA08E /* UIView+Extensions.swift in Sources */,
 				E0012212E1AB63A4E26E9CC0757A976A /* UIVIewController+Extensions.swift in Sources */,
+				CE2B145F284DE19500085B93 /* BotTextMessageTableCellViewModel.swift in Sources */,
 				F7595C8E70D94419063D1C1DB407FB94 /* ViewState+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

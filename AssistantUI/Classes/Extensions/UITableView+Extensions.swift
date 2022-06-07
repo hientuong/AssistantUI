@@ -55,7 +55,7 @@ extension UITableView {
         return cell
     }
 
-    func register<Cell>(type: Cell.Type, identifier: String? = nil, nibName: String? = nil, bundle: Bundle = .main) {
+    func register<Cell>(type: Cell.Type, identifier: String? = nil, nibName: String? = nil, bundle: Bundle? = nil) {
         let cellName = String(describing: type)
         let cellIdentifier = identifier ?? cellName
         let cellNibName = nibName ?? cellName

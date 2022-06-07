@@ -21,7 +21,7 @@
   "source_files": "AssistantUI/Classes/**/*",
   "resource_bundles": {
     "AssistantUI": [
-      "AssistantUI/**/*.{xib,storyboard,xcassets}"
+      "AssistantUI/**/*.{xib,storyboard,xcassets,2ttf}"
     ]
   },
   "dependencies": {
@@ -38,7 +38,7 @@
       "5.2.0"
     ],
     "AssistantAPI": [
-      "0.1.3"
+      "0.1.4"
     ]
   }
 }

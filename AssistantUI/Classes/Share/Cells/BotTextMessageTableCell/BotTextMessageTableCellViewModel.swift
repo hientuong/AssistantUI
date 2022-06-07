@@ -9,7 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AssistantAPI
 
-final class BotTextMessageTableCellViewModel: BaseCellViewModel<String> {
+final class BotTextMessageTableCellViewModel: BaseCellViewModel<BotMessage> {
     
 }

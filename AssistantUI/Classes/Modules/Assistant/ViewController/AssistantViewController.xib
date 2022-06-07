@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssistantViewController">
             <connections>
                 <outlet property="bottomButtons" destination="XRF-fT-n5z" id="98D-Ae-G29"/>
-                <outlet property="closeButton" destination="xje-Hr-axK" id="yJM-VI-kqH"/>
+                <outlet property="closeButton" destination="xje-Hr-axK" id="bPS-Pk-tcN"/>
                 <outlet property="mainViewHeightConstraint" destination="Rps-k2-JGl" id="bGE-4x-i5c"/>
                 <outlet property="tableView" destination="W7E-od-nlH" id="7vo-9c-Zis"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Ojl-Fr-r2U"/>
@@ -46,7 +46,7 @@
                             <inset key="imageEdgeInsets" minX="14" minY="33" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ic_close"/>
                         </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W7E-od-nlH">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W7E-od-nlH">
                             <rect key="frame" x="0.0" y="66" width="414" height="153"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>

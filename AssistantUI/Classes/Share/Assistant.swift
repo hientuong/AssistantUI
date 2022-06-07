@@ -37,6 +37,14 @@ public class Assistant {
         speechRecognizer.transcribe()
     }
     
+    func dismiss() {
+        if self.hasNewCommand == false {
+            self.navigationVC?.dismiss(animated: true, completion: nil)
+            self.navigationVC = nil
+            self.speechRecognizer.resetTranscript()
+        }
+    }
+    
     private func config() {
         NetworkAdapter.shared.setupAdapter(environment: AppEnvironment())
         
@@ -60,11 +68,7 @@ public class Assistant {
             }
             self.navigationVC = navigation
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-                if self?.hasNewCommand == false {
-                    self?.navigationVC?.dismiss(animated: true, completion: nil)
-                    self?.navigationVC = nil
-                    self?.speechRecognizer.resetTranscript()
-                }
+                self?.dismiss()
             }
         } else {
             hasNewCommand = true

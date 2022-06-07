@@ -27,4 +27,20 @@ public protocol AssistantProtocol {
      get VAResponse by messageID
      */
     static func getVAResponse(by messageId: String) -> Single<VAResponse>
+    
+    /**
+     get VAResponse by current sessionId
+     */
+    static func getVAResponse() -> Single<VAResponse>
+    
+    /**
+     Generate Audio
+     */
+    static func generateAudio(text: String,
+                              languageCode: String,
+                              voiceName: String,
+                              generator: String,
+                              acousticModel: String,
+                              style: String,
+                              ouputFormat: String) -> Single<AudioResponse>
 }

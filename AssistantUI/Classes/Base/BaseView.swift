@@ -23,7 +23,8 @@ class BaseView: UIView {
     
     func commonInit() {
         let identifier = String(describing: type(of: self))
-        Bundle.main.loadNibNamed(identifier,
+        let bundle = Bundle(for: type(of: self))
+        bundle.loadNibNamed(identifier,
                                  owner: self,
                                  options: nil)
         addSubview(contentView)

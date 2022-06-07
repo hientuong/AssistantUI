@@ -14,6 +14,7 @@ public class NetworkAdapter {
     public static var shared: NetworkAdapter = NetworkAdapter()
     public var environment: NetworkEnv!
     var appToken: AppToken?
+    var currentSessionId: String?
     
     var session_id: String? {
         if let deviceId = appToken?.deviceID {

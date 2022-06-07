@@ -38,10 +38,14 @@ public class Assistant {
     }
     
     func dismiss() {
+        self.navigationVC?.dismiss(animated: true, completion: nil)
+        self.navigationVC = nil
+        self.speechRecognizer.resetTranscript()
+    }
+    
+    func autoDismiss() {
         if self.hasNewCommand == false {
-            self.navigationVC?.dismiss(animated: true, completion: nil)
-            self.navigationVC = nil
-            self.speechRecognizer.resetTranscript()
+            dismiss()
         }
     }
     
@@ -68,7 +72,7 @@ public class Assistant {
             }
             self.navigationVC = navigation
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-                self?.dismiss()
+                self?.autoDismiss()
             }
         } else {
             hasNewCommand = true

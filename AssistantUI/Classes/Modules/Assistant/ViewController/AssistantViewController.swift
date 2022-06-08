@@ -32,6 +32,7 @@ final class AssistantViewController: BaseViewController<AssistantViewModel> {
         super.viewDidLoad()
     }
     
+    
     override func configUI() {
         tableView.register(type: UserMessageTableCell.self, bundle: Bundle(for: UserMessageTableCell.self))
         tableView.register(type: BotTextMessageTableCell.self, bundle: Bundle(for: BotTextMessageTableCell.self))
@@ -71,6 +72,7 @@ final class AssistantViewController: BaseViewController<AssistantViewModel> {
                     let cell = tableView.createCell(BotTextMessageTableCell.self,
                                                     BotTextMessageTableCellViewModel(with: element),
                                                     IndexPath(row: index, section: 0))
+                    cell.delegate = self
                     return cell
                 }
             }.disposed(by: disposeBag)
@@ -122,6 +124,14 @@ extension AssistantViewController {
                 break
             }
         })
+    }
+}
+
+extension AssistantViewController: BotTextMessageCellDelegate {
+    func didUpdateListUI() {
+        tableView.beginUpdates()
+        tableView.reloadData()
+        tableView.endUpdates()
     }
 }
 

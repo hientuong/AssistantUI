@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'AssistantUI/Classes/**/*'
   
   s.resource_bundles = {
-      'AssistantUI' => ['AssistantUI/**/*.{xib,storyboard,xcassets,2ttf}']
+      'AssistantUI' => ['AssistantUI/**/*.{xib,storyboard,xcassets,ttf}']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
@@ -42,6 +42,8 @@ TODO: Add long description of the pod here.
   s.dependency 'RxSwift', '~> 6.5.0'
   s.dependency 'RxCocoa', '~> 6.5.0'
   s.dependency 'RxDataSources', '~> 5.0'
-  s.dependency 'SwifterSwift', '5.2.0'
-  s.dependency 'AssistantAPI', '0.1.4'
+  s.dependency 'SwifterSwift', '~> 5.2.0'
+  s.dependency 'AssistantAPI', '0.1.5'
+  s.dependency 'SwifterSwift', '~> 5.2.0'
+  s.dependency 'SDWebImage', '~> 5.10.4'
 end

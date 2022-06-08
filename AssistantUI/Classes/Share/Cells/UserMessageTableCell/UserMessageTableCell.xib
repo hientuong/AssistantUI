@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,16 +23,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-i6-go1">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="352"/>
+                        <rect key="frame" x="79" y="0.0" width="313" height="352"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUb-CD-wyj">
-                                <rect key="frame" x="0.0" y="0.0" width="392" height="352"/>
+                                <rect key="frame" x="0.0" y="0.0" width="313" height="352"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sb8-3c-jmT">
-                                        <rect key="frame" x="16" y="6" width="355" height="330"/>
+                                        <rect key="frame" x="16" y="6" width="276" height="330"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-41-fsa">
-                                                <rect key="frame" x="8" y="0.0" width="347" height="330"/>
+                                                <rect key="frame" x="8" y="0.0" width="268" height="330"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -57,13 +57,21 @@
                             </view>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-Lp-LKA">
+                        <rect key="frame" x="20" y="11" width="59" height="330"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="rfd-i6-go1" secondAttribute="trailing" id="6Nf-Se-T33"/>
+                    <constraint firstItem="RwB-Lp-LKA" firstAttribute="leading" secondItem="xfp-ci-SIJ" secondAttribute="leadingMargin" id="Ezz-Ju-aXs"/>
                     <constraint firstAttribute="bottom" secondItem="rfd-i6-go1" secondAttribute="bottom" id="NlB-2p-Kdx"/>
+                    <constraint firstItem="RwB-Lp-LKA" firstAttribute="width" secondItem="xfp-ci-SIJ" secondAttribute="width" multiplier="0.15" id="R4p-Cg-T7F"/>
+                    <constraint firstItem="rfd-i6-go1" firstAttribute="leading" secondItem="RwB-Lp-LKA" secondAttribute="trailing" id="Rqu-ku-qMM"/>
+                    <constraint firstItem="RwB-Lp-LKA" firstAttribute="top" secondItem="xfp-ci-SIJ" secondAttribute="topMargin" id="UUe-hM-yeW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RwB-Lp-LKA" secondAttribute="bottom" id="VJq-Dj-fZy"/>
                     <constraint firstItem="rfd-i6-go1" firstAttribute="top" secondItem="xfp-ci-SIJ" secondAttribute="top" id="yeE-Jh-hbB"/>
-                    <constraint firstItem="rfd-i6-go1" firstAttribute="leading" secondItem="xfp-ci-SIJ" secondAttribute="leading" id="z6e-B5-Xdu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="JLq-wu-7dA"/>

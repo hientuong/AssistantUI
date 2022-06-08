@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 // MARK: - VAResponse
 public struct VAResponse: Codable {
@@ -84,6 +85,21 @@ public struct BotMessage: Codable {
     public var pitch: Int?
     public var speed: Int?
 
+    public func getBotMessageValueObject() -> Any? {
+        if self.type == .list {
+            if let jsonData = value?.toJSON() as? [String: Any] {
+                let botMediaList = BotMessageList(JSON: jsonData, context: nil)
+                return botMediaList
+            }
+        } else if self.type == .media {
+            if let jsonData = value?.toJSON() as? [String: Any] {
+                let botMedia = BotMessageMedia(JSON: jsonData, context: nil)
+                return botMedia
+            }
+        }
+        return nil
+    }
+    
     enum CodingKeys: String, CodingKey {
         case type = "type"
         case value = "value"
@@ -110,6 +126,106 @@ public enum BotMessageType: String, Codable {
     case carousel = "carousel"
     case quick_reply = "quick_reply"
 }
+
+// MARK: - BotMessageMedia
+public struct BotMessageMedia: Codable, Mappable {
+    public init?(map: Map) {}
+    
+    public mutating func mapping(map: Map) {
+        imgUrl <- map[CodingKeys.imgUrl.rawValue]
+        mediaType <- map[CodingKeys.mediaType.rawValue]
+        title <- map[CodingKeys.title.rawValue]
+        subtitle <- map[CodingKeys.subtitle.rawValue]
+        defaultAction <- map[CodingKeys.defaultAction.rawValue]
+        buttons <- map[CodingKeys.buttons.rawValue]
+    }
+    
+    public var imgUrl: String?
+    public var mediaType: String?
+    public var title: String?
+    public var subtitle: String?
+    public var defaultAction: AnyCodable?
+    public var buttons: [AnyCodable]?
+
+    enum CodingKeys: String, CodingKey {
+        case imgUrl = "img_url"
+        case mediaType = "media_type"
+        case title = "title"
+        case subtitle = "subtitle"
+        case defaultAction = "default_action"
+        case buttons = "buttons"
+    }
+
+    public init(imgUrl: String?,
+                mediaType: String?,
+                title: String?,
+                subtitle: String?,
+                defaultAction: AnyCodable?,
+                buttons: [AnyCodable]?) {
+        self.imgUrl = imgUrl
+        self.mediaType = mediaType
+        self.title = title
+        self.subtitle = subtitle
+        self.defaultAction = defaultAction
+        self.buttons = buttons
+    }
+}
+
+// MARK: - BotMessageList
+public struct BotMessageList: Codable, Mappable {
+    public init?(map: Map) {}
+    
+    public mutating func mapping(map: Map) {
+        items <- map[CodingKeys.items.rawValue]
+        buttons <- map[CodingKeys.buttons.rawValue]
+    }
+    
+    
+    public var items: [Item]?
+    public var buttons: [AnyCodable]?
+
+    enum CodingKeys: String, CodingKey {
+        case items = "items"
+        case buttons = "buttons"
+    }
+
+    public init(items: [Item]?, buttons: [AnyCodable]?) {
+        self.items = items
+        self.buttons = buttons
+    }
+}
+
+// MARK: - Item
+public struct Item: Codable, Mappable {
+    public var imgUrl: String?
+    public var title: String?
+    public var subtitle: String?
+    public var buttons: [AnyCodable]?
+    
+    public init?(map: Map) {}
+    
+    public mutating func mapping(map: Map) {
+        imgUrl <- map[CodingKeys.imgUrl.rawValue]
+        title <- map[CodingKeys.title.rawValue]
+        subtitle <- map[CodingKeys.subtitle.rawValue]
+        buttons <- map[CodingKeys.buttons.rawValue]
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case imgUrl = "img_url"
+        case title = "title"
+        case subtitle = "subtitle"
+        case buttons = "buttons"
+    }
+
+    public init(imgUrl: String?, title: String?, subtitle: String?, buttons: [AnyCodable]?) {
+        self.imgUrl = imgUrl
+        self.title = title
+        self.subtitle = subtitle
+        self.buttons = buttons
+    }
+}
+
 
 // MARK: - DialogResponse
 public struct DialogResponse: Codable {
@@ -667,5 +783,13 @@ public struct InferStatus: Codable {
         self.nerMovie = nerMovie
         self.nerGeneral = nerGeneral
         self.dm = dm
+    }
+}
+
+
+extension String {
+    func toJSON() -> Any? {
+        guard let data = self.data(using: .utf8, allowLossyConversion: false) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
     }
 }

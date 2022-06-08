@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVf-7w-KPa">
-                    <rect key="frame" x="0.0" y="506" width="414" height="400"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsU-x0-k4R">
                             <rect key="frame" x="191" y="8" width="32" height="4"/>
@@ -47,7 +47,7 @@
                             <state key="normal" image="ic_close"/>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W7E-od-nlH">
-                            <rect key="frame" x="0.0" y="66" width="414" height="153"/>
+                            <rect key="frame" x="0.0" y="66" width="414" height="615"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
@@ -68,6 +68,11 @@
                             <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Rps-k2-JGl"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRF-fT-n5z">
                     <rect key="frame" x="0.0" y="808" width="414" height="44"/>
@@ -115,7 +120,7 @@
             <viewLayoutGuide key="safeArea" id="r7M-yL-7B2"/>
             <color key="backgroundColor" white="0.0" alpha="0.8032905629" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="OVf-7w-KPa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r7M-yL-7B2" secondAttribute="top" id="Ioe-Tx-dNy"/>
+                <constraint firstItem="OVf-7w-KPa" firstAttribute="top" secondItem="r7M-yL-7B2" secondAttribute="top" id="Ioe-Tx-dNy"/>
                 <constraint firstItem="r7M-yL-7B2" firstAttribute="bottom" secondItem="x2C-Cx-MeJ" secondAttribute="bottom" constant="5" id="QQe-Hj-vXB"/>
                 <constraint firstItem="x2C-Cx-MeJ" firstAttribute="centerX" secondItem="r7M-yL-7B2" secondAttribute="centerX" id="QWI-mR-HBi"/>
                 <constraint firstItem="OVf-7w-KPa" firstAttribute="leading" secondItem="r7M-yL-7B2" secondAttribute="leading" id="SF7-Bw-rd6"/>

@@ -9,7 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AssistantAPI
 
-final class MenuTableCellViewModel: BaseCellViewModel<String> {
+final class MenuTableCellViewModel: BaseCellViewModel<Item> {
     
 }

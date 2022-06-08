@@ -1,16 +1,19 @@
 PODS:
   - Alamofire (5.6.1)
-  - AssistantAPI (0.1.4):
+  - AssistantAPI (0.1.5):
     - Alamofire (= 5.6.1)
+    - ObjectMapper (~> 4.2.0)
     - RxCocoa (~> 6.5.0)
     - RxSwift (~> 6.5.0)
   - AssistantUI (0.1.1):
-    - AssistantAPI (= 0.1.4)
+    - AssistantAPI (= 0.1.5)
     - RxCocoa (~> 6.5.0)
     - RxDataSources (~> 5.0)
     - RxSwift (~> 6.5.0)
-    - SwifterSwift (= 5.2.0)
+    - SDWebImage (~> 5.10.4)
+    - SwifterSwift (~> 5.2.0)
   - Differentiator (5.0.0)
+  - ObjectMapper (4.2.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -21,6 +24,9 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
     - SwifterSwift/CoreAnimation (= 5.2.0)
@@ -56,10 +62,12 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Differentiator
+    - ObjectMapper
     - RxCocoa
     - RxDataSources
     - RxRelay
     - RxSwift
+    - SDWebImage
     - SwifterSwift
 
 EXTERNAL SOURCES:
@@ -68,13 +76,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  AssistantAPI: 2f371488cb55dfeb24997cc239be56325fc07e9a
-  AssistantUI: c116952d2f523254e53266ad6f2a6f4426703cdc
+  AssistantAPI: 6a5bfab9dd3c397bda81c05bcec77ca597a53684
+  AssistantUI: f8b06a7224b292a4324a1bceed8e7d4a50bb1294
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
 PODFILE CHECKSUM: e7954d26bf135c7916adccc10bcf6084f17782df

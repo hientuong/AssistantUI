@@ -21,7 +21,7 @@
   "source_files": "AssistantUI/Classes/**/*",
   "resource_bundles": {
     "AssistantUI": [
-      "AssistantUI/**/*.{xib,storyboard,xcassets,2ttf}"
+      "AssistantUI/**/*.{xib,storyboard,xcassets,ttf}"
     ]
   },
   "dependencies": {
@@ -35,10 +35,13 @@
       "~> 5.0"
     ],
     "SwifterSwift": [
-      "5.2.0"
+      "~> 5.2.0"
     ],
     "AssistantAPI": [
-      "0.1.4"
+      "0.1.5"
+    ],
+    "SDWebImage": [
+      "~> 5.10.4"
     ]
   }
 }

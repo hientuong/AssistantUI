@@ -12,5 +12,5 @@ import RxCocoa
 import AssistantAPI
 
 final class BotTextMessageTableCellViewModel: BaseCellViewModel<BotMessage> {
-    
+  
 }

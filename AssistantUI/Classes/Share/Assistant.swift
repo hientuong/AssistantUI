@@ -75,10 +75,23 @@ public class Assistant {
                 self?.autoDismiss()
             }
         } else {
-            hasNewCommand = true
-            commandObser.onNext(command)
+            if navigationVC != nil {
+                hasNewCommand = true
+                commandObser.onNext(command)
+            }
         }
         
+    }
+    
+    private func shouldStart(command: String) -> Bool {
+        var shouldStart = false
+        let checkCommand = command.lowercased().replacingOccurrences(of: " ", with: "")
+        if checkCommand.contains("hey") ||
+            checkCommand.contains("vin") ||
+            checkCommand.contains("home") {
+            shouldStart = true
+        }
+        return shouldStart
     }
 }
 

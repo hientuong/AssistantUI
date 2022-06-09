@@ -31,10 +31,11 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '13.0'
 
   s.source_files = 'AssistantUI/Classes/**/*'
-  
-  s.resource_bundles = {
-      'AssistantUI' => ['AssistantUI/**/*.{xib,storyboard,xcassets,ttf}']
-  }
+  s.resources = ['AssistantUI/Assets/*.{ttf,xcassets}']
+    s.resource_bundles = {
++     'AssistantUI' => ['AssistantUI/Assets/Media.xcassets', 'AssistantUI/Resources/**', 'AssistantUI/**/*.{xib,storyboard,ttf}']
+    }
+
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

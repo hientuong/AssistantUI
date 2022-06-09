@@ -19,9 +19,14 @@
     "ios": "13.0"
   },
   "source_files": "AssistantUI/Classes/**/*",
+  "resources": [
+    "AssistantUI/Assets/*.{ttf,xcassets}"
+  ],
   "resource_bundles": {
     "AssistantUI": [
-      "AssistantUI/**/*.{xib,storyboard,xcassets,ttf}"
+      "AssistantUI/Assets/Media.xcassets",
+      "AssistantUI/Resources/**",
+      "AssistantUI/**/*.{xib,storyboard,ttf}"
     ]
   },
   "dependencies": {

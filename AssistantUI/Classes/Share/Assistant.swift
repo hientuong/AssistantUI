@@ -59,7 +59,7 @@ public class Assistant {
     }
     
     private func checkCommand(_ command: String) {
-        if command == "Hello", navigationVC == nil {
+        if command.lowercased() == "hello", navigationVC == nil {
             hasNewCommand = false
             let vc = AssistantViewController.createViewController()
             let navigation = UINavigationController(rootViewController: vc)

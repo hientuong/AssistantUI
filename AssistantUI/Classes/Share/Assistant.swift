@@ -59,7 +59,8 @@ public class Assistant {
     }
     
     private func checkCommand(_ command: String) {
-        if command.lowercased() == "hello", navigationVC == nil {
+        print("test command \(command)")
+        if shouldStart(command: command), navigationVC == nil {
             hasNewCommand = false
             let vc = AssistantViewController.createViewController()
             let navigation = UINavigationController(rootViewController: vc)
@@ -71,7 +72,7 @@ public class Assistant {
                 rootVC.present(navigation, animated: true)
             }
             self.navigationVC = navigation
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) { [weak self] in
                 self?.autoDismiss()
             }
         } else {

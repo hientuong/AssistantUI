@@ -47,12 +47,11 @@ final class AssistantViewController: BaseViewController<AssistantViewModel> {
         viewMode
             .bind(to: self.viewModeBinding)
             .disposed(by: disposeBag)
-        Assistant.shared.commandObser
+        Assistant.shared.commandObser.debounce(.milliseconds(300), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] command in
                 self?.viewMode.onNext(.voice)
                 self?.mockMessageCount += 1
                 self?.voiceCommand.onNext(self?.getMockMessage() ?? "")
-                print("test command \(command)")
             })
             .disposed(by: disposeBag)
     }

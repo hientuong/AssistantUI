@@ -92,7 +92,9 @@ class SpeechRecognizer {
         }
         self.audioEngine = audioEngine
         self.request = request
-        task = recognizer.recognitionTask(with: request, resultHandler: recognitionHandler(result:error:))
+        task = recognizer.recognitionTask(with: request, resultHandler: { [weak self] result, error in
+            self?.recognitionHandler(result: result, error: error)
+        })
         
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
@@ -106,7 +108,8 @@ class SpeechRecognizer {
         }
     }
     
-    private func recognitionHandler(result: SFSpeechRecognitionResult?, error: Error?) {
+    private func recognitionHandler(result: SFSpeechRecognitionResult?,
+                                    error: Error?) {
         let receivedFinalResult = result?.isFinal ?? false
         let receivedError = error != nil
         

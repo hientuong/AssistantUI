@@ -1,12 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
-source 'git@github.com:congnq/PodSpec.git'
+source 'https://github.com/hientuong/PodSpec.git'
 
 use_frameworks!
 
 platform :ios, '13.0'
 
 target 'AssistantUI_Example' do
-  pod 'AssistantUI', :path => '../'
+  pod 'AssistantUI', '0.1.2'
 #  pod 'AssistantAPI', '0.1.1'
 #  pod 'Alamofire', '5.6.1'
 #  pod 'RxCocoa', '~> 5.1'

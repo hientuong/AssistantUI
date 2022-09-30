@@ -1,9 +1,9 @@
 {
   "name": "AssistantUI",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "A short description of AssistantUI.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/congnq/AssistantUI",
+  "homepage": "https://github.com/hientuong/AssistantUI",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "cong nguyen": "congnq.hp@gmail.com"
   },
   "source": {
-    "git": "git@github.com:congnq/AssistantUI.git",
-    "tag": "0.1.1"
+    "git": "https://github.com/hientuong/AssistantUI.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "13.0"
